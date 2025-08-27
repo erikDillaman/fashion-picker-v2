@@ -280,60 +280,15 @@ legend {
 .right-panels {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
-/* Top Right: Feedback Panel */
-.feedback-panel {
-    background: #bbf7d0;
-    border: 2px solid #86efac;
-    border-radius: 10px;
-    padding: 25px;
-    flex: 1;
-}
-
-.feedback-panel h2 {
-    color: #166534;
-    font-size: 1.3rem;
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-
-.feedback-content {
-    color: #166534;
-    line-height: 1.6;
-}
-
-.feedback-content p {
-    margin-bottom: 12px;
-}
-
-.feedback-content p:last-child {
-    margin-bottom: 0;
-}
-
-.tip-item {
-    background: #fef3c7;
-    border-left: 4px solid #f59e0b;
-    padding: 12px;
-    margin-bottom: 10px;
-    border-radius: 0 6px 6px 0;
-}
-
-.tip-item p {
-    margin: 0;
-    color: #92400e;
-    font-weight: 500;
-}
-
-/* Bottom Right: Badges Panel */
+/* Badges Panel */
 .badges-panel {
     background: #fde68a;
     border: 2px solid #fbbf24;
     border-radius: 10px;
     padding: 25px;
-    flex: 1;
+    height: 100%;
 }
 
 .badges-panel h2 {
@@ -345,9 +300,10 @@ legend {
 }
 
 .badges-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 15px;
+    align-items: center;
 }
 
 .badge {
@@ -358,6 +314,8 @@ legend {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: 2px solid #e5e7eb;
     transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
 }
 
 .badge.earned {
@@ -376,14 +334,24 @@ legend {
     display: block;
     font-weight: 600;
     color: #374151;
-    margin-bottom: 4px;
-    font-size: 0.9rem;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.badge-description {
+    display: block;
+    font-size: 0.8rem;
+    color: #6b7280;
+    font-style: italic;
+    margin-bottom: 8px;
+    line-height: 1.3;
 }
 
 .badge-status {
     display: block;
     font-size: 0.75rem;
     color: #6b7280;
+    font-weight: 500;
 }
 
 .badge.earned .badge-status {
@@ -402,7 +370,6 @@ legend {
         flex-direction: row;
     }
     
-    .feedback-panel,
     .badges-panel {
         flex: 1;
     }
@@ -431,7 +398,6 @@ legend {
     }
     
     .criteria-panel,
-    .feedback-panel,
     .badges-panel {
         padding: 20px;
     }
@@ -441,7 +407,6 @@ legend {
     }
     
     .badges-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 10px;
     }
     
