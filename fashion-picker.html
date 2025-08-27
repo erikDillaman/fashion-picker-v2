@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Picker</title>
+    <link rel="stylesheet" href="fashion-styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>👗 Fashion Picker</h1>
+            <p>Choose your style and earn fashion badges!</p>
+        </header>
+
+        <div class="main-layout">
+            <!-- Left Panel: Criteria Selection Elements -->
+            <div class="criteria-panel">
+                <h2>Select Your Style Below!</h2>
+                
+                <div class="input-section">
+                    <h3>🌤️ Weather</h3>
+                    <label for="weather-select">What's the weather like?</label>
+                    <select id="weather-select" aria-describedby="weather-help">
+                        <option value="">Choose weather...</option>
+                        <option value="sunny">☀️ Sunny</option>
+                        <option value="cold">❄️ Cold</option>
+                        <option value="rainy">🌧️ Rainy</option>
+                    </select>
+                    <div id="weather-help" class="help-text">Select the current weather condition</div>
+                </div>
+
+                <div class="input-section">
+                    <h3>🎨 Color Palette</h3>
+                    <label for="palette-slider">Choose your color style:</label>
+                    <div class="slider-container">
+                        <span class="slider-label">Neutrals</span>
+                        <input type="range" id="palette-slider" min="0" max="2" value="0" step="1" aria-describedby="palette-help">
+                        <span class="slider-label">Brights</span>
+                    </div>
+                    <div id="palette-value" class="palette-display">Monochrome</div>
+                    <div id="palette-help" class="help-text">Slide to choose your preferred color palette</div>
+                </div>
+
+                <div class="input-section">
+                    <h3>👜 Accessories</h3>
+                    <fieldset>
+                        <legend>Select your accessories:</legend>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="jacket-check" value="jacket">
+                                <span class="checkmark"></span>
+                                🧥 Jacket
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="hat-check" value="hat">
+                                <span class="checkmark"></span>
+                                👒 Hat
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="sunglasses-check" value="sunglasses">
+                                <span class="checkmark"></span>
+                                🕶️ Sunglasses
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="button-container">
+                    <button id="check-criteria-btn" class="check-criteria-button">
+                        Check Criteria
+                    </button>
+                    <button id="reset-btn" class="reset-button">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Panel Container -->
+            <div class="right-panels">
+                <!-- Top Right: Feedback for User / Explanations -->
+                <div class="feedback-panel">
+                    <h2> </h2>
+                    <div id="feedback-content" class="feedback-content">
+                        <p>Make your selections on the left to get personalized style feedback!</p>
+                    </div>
+                </div>
+
+                <!-- Bottom Right: Badges Earned -->
+                <div class="badges-panel">
+                    <h2>Badges Earned</h2>
+                    <div id="badges-container" class="badges-grid">
+                        <div class="badge" id="rain-ready-badge">
+                            <span class="badge-icon">🌧️</span>
+                            <span class="badge-name">Rain Ready</span>
+                            <span class="badge-status">Not Earned</span>
+                        </div>
+                        <div class="badge" id="cozy-cool-badge">
+                            <span class="badge-icon">❄️</span>
+                            <span class="badge-name">Cozy Cool</span>
+                            <span class="badge-status">Not Earned</span>
+                        </div>
+                        <div class="badge" id="sun-smart-badge">
+                            <span class="badge-icon">☀️</span>
+                            <span class="badge-name">Sun Smart</span>
+                            <span class="badge-status">Not Earned</span>
+                        </div>
+                        <div class="badge" id="monochrome-mood-badge">
+                            <span class="badge-icon">⚫</span>
+                            <span class="badge-name">Monochrome Mood</span>
+                            <span class="badge-status">Not Earned</span>
+                        </div>
+                        <div class="badge" id="statement-style-badge">
+                            <span class="badge-icon">🌈</span>
+                            <span class="badge-name">Statement Style</span>
+                            <span class="badge-status">Not Earned</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="fashion-script.js"></script>
+</body>
+</html>
