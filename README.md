@@ -31,7 +31,7 @@ An interactive web application that helps users make fashion choices based on we
    ```bash
    cd fashion-picker
    ```
-3. Open `fashion-picker.html` in your web browser
+3. Open `index.html` in your web browser
 
 ### Usage
 1. Select the current weather condition from the dropdown
@@ -44,10 +44,12 @@ An interactive web application that helps users make fashion choices based on we
 
 ```
 fashion-picker/
-├── fashion-picker.html    # Main HTML file
+├── index.html            # Main HTML file (GitHub Pages entry point)
 ├── fashion-styles.css     # Stylesheet with responsive design
 ├── fashion-script.js      # JavaScript logic for interactions and badges
-└── README.md             # Project documentation
+├── README.md             # Project documentation
+├── .gitignore            # Git exclusions
+└── LICENSE               # MIT License
 ```
 
 ## 🎯 Educational Purpose
